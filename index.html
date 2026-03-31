@@ -280,7 +280,14 @@ body {
 }
 .dot.on { background: #ff6b9d; transform: scale(1.5); }
 
-/* ===== TIMER ===== */
+
+/*  ==== AUDIO PLAYERS ==== */
+<audio id="audio-happy" src="happy.mp3" preload="auto" loop></audio>
+<audio id="audio-sad" src="sad.mp3" preload="auto" loop></audio>
+<audio id="audio-love" src="love.mp3" preload="auto" loop></audio>
+
+  
+  /* ===== TIMER ===== */
 .timer-wrap {
   margin: 14px auto;
   width: 64px; height: 64px;
@@ -647,6 +654,58 @@ function updateDots(id){
     d.classList.toggle('on', i===n);
   });
 }
+// ===== AUDIO LOGIC =====
+const audioHappy = document.getElementById('audio-happy');
+const audioSad   = document.getElementById('audio-sad');
+const audioLove  = document.getElementById('audio-love');
+
+let lastHappyTime = 0;
+let lastLoveTime = 0;
+let currentAudio = null;
+
+function stopAllAudio() {
+  [audioHappy, audioSad, audioLove].forEach(a => {
+    if (!a.paused) a.pause();
+  });
+}
+
+// Call this whenever the page changes
+function handleAudio(id) {
+  // Sad/angry pages
+  const sadPages = ['p4a','p5a'];
+  // Final love song page
+  const lovePages = ['pfinal'];
+
+  stopAllAudio();
+
+  if (lovePages.includes(id)) {
+    audioLove.currentTime = lastLoveTime;
+    audioLove.play();
+    currentAudio = audioLove;
+  } else if (sadPages.includes(id)) {
+    audioSad.currentTime = 0;
+    audioSad.play();
+    currentAudio = audioSad;
+  } else {
+    // Happy music for all main/non-sad pages except final
+    audioHappy.currentTime = lastHappyTime;
+    audioHappy.play();
+    currentAudio = audioHappy;
+  }
+}
+
+// Save last time before pausing
+[audioHappy, audioLove].forEach(audio => {
+  audio.addEventListener('pause', () => {
+    if(audio === audioHappy) lastHappyTime = audio.currentTime;
+    else lastLoveTime = audio.currentTime;
+  });
+});
+
+audioSad.addEventListener('pause', () => {
+  audioSad.currentTime = 0;
+});
+  
 
 // ===== GO TO PAGE =====
 function goTo(id){
