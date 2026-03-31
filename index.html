@@ -358,7 +358,15 @@ body {
 </style>
 </head>
 <body>
-
+<div id="audioStart" style="
+  position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.85);color:white;flex-direction:column;">
+  <button onclick="startAudio()" style="font-size:1.3rem;padding:20px 36px;border-radius:40px;
+    margin-bottom:18px;background:#ff6b9d;color:white;border:none;font-weight:800">
+    🔊 Tap to Enable Music
+  </button>
+  <div style="font-size:1.02rem;opacity:0.75">Music makes the experience better!</div>
+</div>
 <div class="heart-rain" id="heartRain"></div>
 <div class="dots" id="dots"></div>
 
@@ -626,6 +634,13 @@ body {
 </div>
 
 <script>
+ function startAudio() {
+  document.getElementById('audioStart').style.display = 'none';
+  // Unblock audio for all later playback (user gesture)
+  audioHappy.play().then(()=>audioHappy.pause()).catch(()=>{}); // unlock
+  audioSad.play().then(()=>audioSad.pause()).catch(()=>{});
+  audioLove.play().then(()=>audioLove.pause()).catch(()=>{});
+} 
 // ===== SETUP =====
 const pageOrder = ['p1','p2','p3','p4h','p6','pfinal'];
 const totalDots = 6;
