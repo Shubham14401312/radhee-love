@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Dancing+Script:wght@700;900&family=Pacifico&display=swap" rel="stylesheet" />
 
 <style>
-/* Your CSS code here (same as provided) */
+/* Your CSS styling here (same as provided) */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -353,8 +353,7 @@ body {
 </style>
 </head>
 <body>
-
-<!-- Audio Start Overlay -->
+<!-- Initial overlay to start audio -->
 <div id="audioStart" style="
   position:fixed; inset:0; z-index:9999; display:flex; align-items:center; justify-content:center;
   background:rgba(0,0,0,0.85); color:white; flex-direction:column;">
@@ -365,12 +364,13 @@ body {
   <div style="font-size:1.02rem; opacity:0.75">Music makes the experience better!</div>
 </div>
 
-<!-- Heart Rain -->
+<!-- Heart rain container -->
 <div class="heart-rain" id="heartRain"></div>
-<!-- Progress Dots -->
+<!-- Dots indicator -->
 <div class="dots" id="dots"></div>
 
-<!-- PAGE 1 -->
+<!-- Your page content here (unchanged) -->
+<!-- Example page 1 -->
 <div class="page active" id="p1">
   <div class="page-bg"></div>
   <div class="page-overlay"></div>
@@ -386,11 +386,32 @@ body {
       এখনই othhh... please? 🙏💕
     </p>
     <button class="btn btn-pink" onclick="goTo('p2')">হ্যাঁ উঠে গেছি! 😴→😊</button><br>
-   
+    <button class="btn btn-ghost" onclick="goTo('psnooze')">আর ৫ মিনিট... 😴</button>
   </div>
 </div>
 
-<!-- PAGE 2 -->
+<!-- ============================
+     SNOOZE PAGE
+============================= -->
+<div class="page" id="psnooze">
+  <div class="page-bg"></div>
+  <div class="page-overlay"></div>
+  <div class="particles" id="par-psnooze"></div>
+  <div class="card">
+    <div class="shine"></div>
+    <span class="big-emoji">😡</span>
+    <div class="tag">রাগ Rag hcche kintu ei stk er moto 🔥</div>
+    <div class="page-title">রাধেএএএ!! 😤</div>
+    <p class="page-sub">
+      ৫ মিনিট না!! এখনই oth !! 😤<br>
+      আমি দেখছি toke 👀<br>
+      উঠে দাঁত maj ja ! 🪥
+    </p>
+    <button class="btn btn-pink" onclick="goTo('p1')">আচ্ছা আচ্ছা উঠছি! 😭</button>
+  </div>
+</div>
+
+<!-- Page 2 -->
 <div class="page" id="p2">
   <div class="page-bg"></div>
   <div class="page-overlay"></div>
@@ -398,10 +419,10 @@ body {
   <div class="card">
     <div class="shine"></div>
     <span class="big-emoji">🪥</span>
-    <div class="tag">সকালের রুটিন ✅</div>
+    <div class="tag">Morning রুটিন ✅</div>
     <div class="page-title">দাঁত brush korechis ? 😏</div>
     <p class="page-sub">
-      bol grid-template-columns 🧐<br>
+      🧐<br>
       দাঁত মাজা, মুখ ধোয়া, সব হয়ে গেছে? 🫧<br>
       sotti sotti bol bolchi! 💕
     </p>
@@ -410,7 +431,7 @@ body {
   </div>
 </div>
 
-<!-- NOT READY PAGE -->
+<!-- Page not ready -->
 <div class="page" id="pnotready">
   <div class="page-bg"></div>
   <div class="page-overlay"></div>
@@ -419,7 +440,7 @@ body {
     <div class="shine"></div>
     <span class="big-emoji">😤</span>
     <div class="tag">age ja jongla </div>
-    <div class="page-title">যাও! ফ্রেশ হয়ে ay ! 😤</div>
+    <div class="page-title">যা! ফ্রেশ হয়ে ay ! 😤</div>
     <p class="page-sub">
       আমি wait করছি...<br>
       একদম slow motion এ না! 😒<br>
@@ -429,7 +450,7 @@ body {
   </div>
 </div>
 
-<!-- PAGE 3 -->
+<!-- Page 3 -->
 <div class="page" id="p3">
   <div class="page-bg"></div>
   <div class="page-overlay"></div>
@@ -441,7 +462,7 @@ body {
     <div class="page-title">একটা কাজ কর না রাধে~ 🥺</div>
     <p class="page-sub">
       এখনই... ঠিক এই akhoni... 🫣<br>
-      স্ক্রিনে একটা kissi de na 💋<br>
+      স্ক্রিনে একটা kissi de na না 💋<br>
       plzz plzz plzz ! 🙏💕<br>
       <span style="font-size:0.82rem;color:rgba(255,255,255,0.55)">*chaile msg eo dite paris * 😳</span>
     </p>
@@ -450,7 +471,7 @@ body {
   </div>
 </div>
 
-<!-- PAGE 4H — Waiting for Kiss -->
+<!-- Page 4H waiting for kiss -->
 <div class="page" id="p4h">
   <div class="page-bg"></div>
   <div class="page-overlay"></div>
@@ -476,7 +497,7 @@ body {
   </div>
 </div>
 
-<!-- PAGE 4A — Angry (No Kiss) -->
+<!-- Page 4A angry (no kiss) -->
 <div class="page angry" id="p4a">
   <div class="page-bg"></div>
   <div class="page-overlay"></div>
@@ -496,7 +517,7 @@ body {
   </div>
 </div>
 
-<!-- PAGE 5A — Please (Pleading) -->
+<!-- Page 5A please (pleading) -->
 <div class="page angry" id="p5a">
   <div class="page-bg"></div>
   <div class="page-overlay"></div>
@@ -516,7 +537,7 @@ body {
   </div>
 </div>
 
-<!-- PAGE 6 — I Know! -->
+<!-- Page 6 — I Know! -->
 <div class="page" id="p6">
   <div class="page-bg"></div>
   <div class="page-overlay"></div>
@@ -538,13 +559,13 @@ body {
   </div>
 </div>
 
-<!-- FINAL LOVE PAGE -->
+<!-- Final love page -->
 <div class="page" id="pfinal">
   <div class="page-bg"></div>
   <div class="page-overlay" style="background:linear-gradient(160deg,rgba(80,0,40,0.6) 0%,rgba(160,0,70,0.65) 100%)"></div>
   <div class="particles" id="par-pfinal"></div>
 
-  <!-- Corner Photos -->
+  <!-- Corner photos -->
   <div class="photo-frame" style="top:14px;right:14px;width:72px;height:72px;border-radius:50%">
     <img src="images/IMG_20241016_024136.jpg" alt="">
   </div>
@@ -583,41 +604,40 @@ body {
       </a>
     </div>
 
-    <!-- Heart Rain Button -->
+    <!-- Heart rain button -->
     <button class="btn btn-ghost" onclick="startHeartRain()" style="font-size:0.88rem;padding:10px 22px;width:100%">
       💖 wanna se a heart rain ?
     </button>
   </div>
 </div>
 
-<!-- AUDIO PLAYERS -->
+<!-- Audio elements -->
 <audio id="audio-happy" src="happy.mp3" preload="auto" loop></audio>
 <audio id="audio-sad" src="sad.mp3" preload="auto" loop></audio>
 <audio id="audio-love" src="love.mp3" preload="auto" loop></audio>
 
 <script>
-  // START AUDIO FUNCTION
+  // ====== START AUDIO ======
   function startAudio() {
-    document.getElementById('audioStart').style.display = 'none';
-    // Unlock audio
+    document.getElementById('audioStart').style.display='none';
+    // Play and pause immediately to unlock
     audioHappy.play().then(()=>audioHappy.pause()).catch(()=>{});
     audioSad.play().then(()=>audioSad.pause()).catch(()=>{});
     audioLove.play().then(()=>audioLove.pause()).catch(()=>{});
   }
 
-  // PAGE ORDER and Dots
-  const pageOrder = ['p1','p2','p3','p4h','p6','pfinal'];
-  const totalDots = 6;
-  let current = 'p1';
+  const pageOrder=['p1','p2','p3','p4h','p6','pfinal'];
+  const totalDots=6;
+  let current='p1';
 
-  const dotsEl = document.getElementById('dots');
-  for(let i=0; i<totalDots; i++){
-    const d = document.createElement('div');
-    d.className = 'dot' + (i===0?' on':'');
+  const dotsEl=document.getElementById('dots');
+  for(let i=0;i<totalDots;i++){
+    const d=document.createElement('div');
+    d.className='dot'+(i===0?' on':'');
     dotsEl.appendChild(d);
   }
 
-  const stepMap = {
+  const stepMap={
     p1:0, psnooze:0,
     p2:1, pnotready:1,
     p3:2,
@@ -628,76 +648,62 @@ body {
   };
 
   function updateDots(id){
-    const n = stepMap[id] ?? 0;
+    const n=stepMap[id]??0;
     document.querySelectorAll('.dot').forEach((d,i)=>{
-      d.classList.toggle('on', i===n);
+      d.classList.toggle('on',i===n);
     });
   }
 
-  // AUDIO Elements
-  const audioHappy = document.getElementById('audio-happy');
-  const audioSad   = document.getElementById('audio-sad');
-  const audioLove  = document.getElementById('audio-love');
+  const audioHappy=document.getElementById('audio-happy');
+  const audioSad=document.getElementById('audio-sad');
+  const audioLove=document.getElementById('audio-love');
 
-  let lastHappyTime = 0;
-  let lastLoveTime = 0;
-  let currentAudio = null;
+  let lastHappyTime=0;
+  let lastLoveTime=0;
+  let currentAudio=null;
 
   function stopAllAudio() {
-    [audioHappy, audioSad, audioLove].forEach(a => {
-      if (!a.paused) a.pause();
+    [audioHappy,audioSad,audioLove].forEach(a=>{
+      if(!a.paused) a.pause();
     });
   }
 
-  // Handle page change and play audio accordingly
   function handleAudio(id) {
-    const sadPages = ['p4a','p5a'];
-    const lovePages = ['pfinal'];
-
+    const sadPages=['p4a','p5a'];
+    const lovePages=['pfinal'];
     stopAllAudio();
-
-    if (lovePages.includes(id)) {
-      audioLove.currentTime = lastLoveTime;
+    if(lovePages.includes(id)){
+      audioLove.currentTime=lastLoveTime;
       audioLove.play();
-      currentAudio = audioLove;
-    } else if (sadPages.includes(id)) {
-      audioSad.currentTime = 0;
+      currentAudio=audioLove;
+    } else if(sadPages.includes(id)){
+      audioSad.currentTime=0;
       audioSad.play();
-      currentAudio = audioSad;
+      currentAudio=audioSad;
     } else {
-      audioHappy.currentTime = lastHappyTime;
+      audioHappy.currentTime=lastHappyTime;
       audioHappy.play();
-      currentAudio = audioHappy;
+      currentAudio=audioHappy;
     }
   }
 
-  // Save last times
-  audioHappy.addEventListener('pause', () => {
-    lastHappyTime = audioHappy.currentTime;
-  });
-  audioLove.addEventListener('pause', () => {
-    lastLoveTime = audioLove.currentTime;
-  });
-  audioSad.addEventListener('pause', () => {
-    audioSad.currentTime = 0;
-  });
+  audioHappy.addEventListener('pause', ()=>{lastHappyTime=audioHappy.currentTime;});
+  audioLove.addEventListener('pause', ()=>{lastLoveTime=audioLove.currentTime;});
+  audioSad.addEventListener('pause', ()=>{audioSad.currentTime=0;});
 
-  // Go to page function, now calls handleAudio
+  // ====== GO TO PAGE FUNCTION ======
   function goTo(id){
     document.getElementById(current).classList.remove('active');
-    current = id;
-    const el = document.getElementById(current);
+    current=id;
+    const el=document.getElementById(current);
     el.classList.add('active');
-
-    // Reset animation
-    const card = el.querySelector('.card');
+    // reset animation
+    const card=el.querySelector('.card');
     if(card){ card.style.animation='none'; void card.offsetWidth; card.style.animation=''; }
-
     updateDots(id);
-    handleAudio(id); // <-- Call to play correct audio
+    handleAudio(id); // <-- added here to ensure correct audio
   }
 
-  // Button handlers
   function notReady() {
     goTo('pnotready');
   }
@@ -705,21 +711,21 @@ body {
     goTo('p4h');
     document.getElementById('waitCard').style.display='block';
     document.getElementById('confirmCard').style.display='none';
-    const ring = document.getElementById('timerRing');
+    const ring=document.getElementById('timerRing');
     ring.style.animation='none'; void ring.offsetWidth; ring.style.animation='spin 2s linear forwards';
     setTimeout(()=>{
       document.getElementById('waitCard').style.display='none';
       document.getElementById('confirmCard').style.display='block';
-      const c = document.getElementById('confirmCard');
+      const c=document.getElementById('confirmCard');
       c.style.animation='none'; void c.offsetWidth; c.style.animation='cardIn 0.6s cubic-bezier(0.34,1.56,0.64,1) both';
-    }, 2300);
+    },2300);
   }
 
-  let angryCount = 0;
+  let angryCount=0;
   function moreAngry() {
     angryCount++;
-    const title = document.querySelector('#p4a .angry-title');
-    const sub = document.querySelector('#p4a .angry-sub');
+    const title=document.querySelector('#p4a .angry-title');
+    const sub=document.querySelector('#p4a .angry-sub');
     if(angryCount===1){
       title.textContent='রাধেএএএএএ!! 😭😭';
       sub.innerHTML='প্লিজ যে!! আমি কাঁদছি!!! 😭💔<br>একটা চুমু শুধু একটা!!! 🙏🙏🙏<br>তুমি কি একটুও ভালোবাসো না? 💔';
@@ -729,61 +735,59 @@ body {
     }
   }
 
-  // Particles
-  const happySet = ['💗','🌸','✨','💕','🥰','🌹','💖','🎀','🦋','⭐','🌷','💫'];
-  const angrySet = ['💔','😭','🌧️','💧','🫠','💜','🥺','😢','☁️'];
-  const finalSet = ['❤️','💕','💗','💖','💞','🌸','✨','🎆','💫','🥰','🌹','🎊','💝'];
+  // particles
+  const happySet=['💗','🌸','✨','💕','🥰','🌹','💖','🎀','🦋','⭐','🌷','💫'];
+  const angrySet=['💔','😭','🌧️','💧','🫠','💜','🥺','😢','☁️'];
+  const finalSet=['❤️','💕','💗','💖','💞','🌸','✨','🎆','💫','🥰','🌹','🎊','💝'];
 
-  function spawnParticles(containerId, isAngry, isFinal) {
-    const el = document.getElementById(containerId);
+  function spawnParticles(containerId, isAngry, isFinal){
+    const el=document.getElementById(containerId);
     if(!el) return;
-    el.innerHTML = '';
-    const set = isFinal ? finalSet : isAngry ? angrySet : happySet;
-    const count = isFinal ? 22 : isAngry ? 10 : 13;
+    el.innerHTML='';
+    const set=isFinal?finalSet:isAngry?angrySet:happySet;
+    const count=isFinal?22:isAngry?10:13;
     for(let i=0;i<count;i++){
-      const p = document.createElement('div');
+      const p=document.createElement('div');
       p.className='particle';
-      p.textContent = set[Math.floor(Math.random()*set.length)];
-      p.style.left = (Math.random()*100)+'vw';
-      p.style.fontSize = (0.7+Math.random()*1.4)+'rem';
-      p.style.animationDuration = (7+Math.random()*11)+'s';
-      p.style.animationDelay = (Math.random()*10)+'s';
+      p.textContent=set[Math.floor(Math.random()*set.length)];
+      p.style.left=(Math.random()*100)+'vw';
+      p.style.fontSize=(0.7+Math.random()*1.4)+'rem';
+      p.style.animationDuration=(7+Math.random()*11)+'s';
+      p.style.animationDelay=(Math.random()*10)+'s';
       el.appendChild(p);
     }
   }
 
-  // Initialize particles for all pages
   document.querySelectorAll('.page').forEach(page => {
-    const id = page.id;
-    const cid = 'par-' + id;
-    const isAngry = page.classList.contains('angry') || ['p4a','p5a'].includes(id);
-    const isFinal = id==='pfinal';
-    spawnParticles(cid, isAngry, isFinal);
+    const id=page.id;
+    const cid='par-'+id;
+    const isAngry=page.classList.contains('angry')||['p4a','p5a'].includes(id);
+    const isFinal=id==='pfinal';
+    spawnParticles(cid,isAngry,isFinal);
   });
 
   // Heart rain
   function startHeartRain() {
-    const rain = document.getElementById('heartRain');
+    const rain=document.getElementById('heartRain');
     rain.classList.add('show');
-    const set = ['❤️','💕','💗','💖','💞','🌸','✨','💋','🥰','🌹','🎊','💝'];
+    const set=['❤️','💕','💗','💖','💞','🌸','✨','💋','🥰','🌹','🎊','💝'];
     for(let i=0;i<70;i++){
       setTimeout(()=>{
-        const h = document.createElement('div');
+        const h=document.createElement('div');
         h.className='rain-h';
-        h.textContent = set[Math.floor(Math.random()*set.length)];
-        h.style.left = (Math.random()*100)+'vw';
-        h.style.fontSize = (1+Math.random()*2.2)+'rem';
-        h.style.animationDuration = (2.5+Math.random()*3.5)+'s';
-        h.style.animationDelay = (Math.random()*10)+'s';
+        h.textContent=set[Math.floor(Math.random()*set.length)];
+        h.style.left=(Math.random()*100)+'vw';
+        h.style.fontSize=(1+Math.random()*2.2)+'rem';
+        h.style.animationDuration=(2.5+Math.random()*3.5)+'s';
+        h.style.animationDelay=(Math.random()*10)+'s';
         rain.appendChild(h);
-        setTimeout(()=>h.remove(), 6000);
-      }, i*90);
+        setTimeout(()=>h.remove(),6000);
+      },i*90);
     }
-    setTimeout(()=>rain.classList.remove('show'), 9000);
+    setTimeout(()=>rain.classList.remove('show'),9000);
   }
 
   // Initialize
-  // Set initial page's audio
   handleAudio('p1');
 
 </script>
